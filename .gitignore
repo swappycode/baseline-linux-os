@@ -1,0 +1,36 @@
+# Kernel (submodule directory only, not build output)
+kernel/linux/*
+
+# BusyBox build artifacts
+busybox/**/_install/
+busybox/**/.config
+busybox/**/*.o
+busybox/**/*.a
+busybox/**/busybox
+busybox/**/busybox_unstripped*
+busybox/**/built-in.a
+
+# initramfs output
+initramfs/*.cpio.gz
+
+# Rootfs runtime artifacts
+rootfs/dev/*
+rootfs/proc/*
+rootfs/sys/*
+rootfs/tmp/*
+rootfs/run/*
+
+# General build artifacts
+*.o
+*.a
+*.cmd
+*.symvers
+*.order
+*.tmp
+*.log
+*.img
+
+# Editor / OS junk
+*~
+*.swp
+.DS_Store
