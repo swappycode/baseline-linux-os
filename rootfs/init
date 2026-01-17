@@ -1,6 +1,15 @@
 #!/bin/sh
 
+# Mount kernel-provided devices
+mount -t devtmpfs none /dev
+
+# Kernel interfaces
 mount -t proc none /proc
 mount -t sysfs none /sys
+
+# Runtime writable filesystems
+mkdir -p /tmp /run
+mount -t tmpfs tmpfs /tmp
+mount -t tmpfs tmpfs /run
 
 exec /bin/sh
